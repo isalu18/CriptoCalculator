@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import useMoneda from '../hooks/useMoneda';
 
 const Boton = styled.input`
     margin-top: 20px;
@@ -20,8 +21,21 @@ const Boton = styled.input`
 `;
 
 const Formulario = () => {
+
+    //Arreglo de monedas
+    const MONEDAS = [
+        { codigo: 'US', nombre: 'Dolar americano'},
+        { codigo: 'MXN', nombre: 'Peso Mexicano'},
+        { codigo: 'EUR', nombre: 'Euro'},
+        { codigo: 'GBP', nombre: 'Libra Esterlina'}
+    ];
+
+    //Utilizar useMoneda
+    const [ moneda, SelectMonedas ] = useMoneda('Elige tu moneda', '', MONEDAS); //Les puedes cambiar el nombre al hacer array destructuring
     return ( 
         <form>
+            <SelectMonedas/>
+
             <Boton
                 type="submit"
                 value="Calcular"
