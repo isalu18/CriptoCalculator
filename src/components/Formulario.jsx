@@ -32,7 +32,7 @@ const Formulario = ({ guardarMoneda, guardarCriptomoneda }) => {
 
     //Arreglo de monedas
     const MONEDAS = [
-        { codigo: 'US', nombre: 'Dolar americano'},
+        { codigo: 'USD', nombre: 'Dolar americano'},
         { codigo: 'MXN', nombre: 'Peso Mexicano'},
         { codigo: 'EUR', nombre: 'Euro'},
         { codigo: 'GBP', nombre: 'Libra Esterlina'}
